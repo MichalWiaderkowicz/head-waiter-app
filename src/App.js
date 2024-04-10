@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home/Home.js";
 import Table from "./components/pages/Table/Table.js";
 import NotFound from "./components/pages/NotFound/NtFound.js";
+import Footer from "./components/pages/views/Footer/Footer.js";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/table/:tableId" element={<Table />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </Container>
   );
 }
