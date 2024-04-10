@@ -6,16 +6,13 @@ import NotFound from "./components/pages/NotFound/NtFound.js";
 
 function App() {
   return (
-    <main>
-      <h1>Hello world</h1>
-      <Container>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/table/:tableId" element={<Table />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Container>
-    </main>
+    <Container>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/table/:tableId" element={<Table />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Container>
   );
 }
 
