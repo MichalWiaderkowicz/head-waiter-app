@@ -1,5 +1,13 @@
+import { useSelector } from "react-redux";
+import { getAllTables } from "../../../redux/tablesRedux";
+
 const Home = () => {
-  return <h1>Home page</h1>;
+  const tables = useSelector(getAllTables);
+  return (
+    <div>
+      <h2>All tables</h2>
+    </div>
+  );
 };
 
 export default Home;
