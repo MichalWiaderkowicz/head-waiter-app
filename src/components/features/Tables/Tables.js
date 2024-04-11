@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Tables = ({ tables }) => {
   return (
-    <Row>
+    <Row xs={1} sm={2} md={3}>
       {tables.map((table) => (
         <Card key={table.id} style={{ width: "100%" }}>
           <Card.Body className="d-flex align-items-center">
