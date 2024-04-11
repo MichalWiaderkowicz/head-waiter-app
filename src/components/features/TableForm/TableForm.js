@@ -27,36 +27,36 @@ const TableForm = ({ action, tableId, ...props }) => {
           <option>Cleaning</option>
         </Form.Select>
       </div>
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center my-2">
         <strong>People:</strong>
         <Form.Control
-          className="align-items-center"
-          style={{ width: "50px" }}
+          className="align-items-center my-2"
+          style={{ width: "50px", marginLeft: "15px" }}
           value={peopleAmount}
           onChange={(e) => setPeopleAmount(e.target.value)}
           type="text"
-          placeholder="Enter title"
+          placeholder="0"
         />
         <span>/</span>
         <Form.Control
-          className="align-items-center"
+          className="d-flex align-items-center my-2"
           style={{ width: "50px" }}
           value={maxPeopleAmount}
           onChange={(e) => setMaxPeopleAmount(e.target.value)}
           type="text"
-          placeholder="Enter title"
+          placeholder="0"
         />
       </div>
-      <div className="align-items-center">
+      <div className="d-flex align-items-center my-2">
         <strong>Bill:</strong>
-        <span className="ml-1">$</span>
+        <span className="mx-2">$</span>
         <Form.Control
-          className="align-items-center"
-          style={{ width: "50px" }}
+          className="d-flex align-items-center"
+          style={{ width: "50px", marginLeft: "15px" }}
           value={bill}
           onChange={(e) => setBill(e.target.value)}
           type="text"
-          placeholder="Enter title"
+          placeholder="0"
         />
       </div>
       <Button variant="primary" type="submit">

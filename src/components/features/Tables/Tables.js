@@ -1,33 +1,30 @@
-import { Row, Card, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const Tables = ({ tables }) => {
   return (
-    <Row xs={1} sm={2} md={3}>
+    <div>
       {tables.map((table) => (
-        <Card key={table.id} style={{ width: "100%" }}>
-          <Card.Body className="d-flex align-items-center">
+        <Card key={table.id} className="w-100">
+          <Card.Body className="d-flex allign-items-center text-nowrap">
             <Card.Title>
               <strong>Table {table.id}</strong>
             </Card.Title>
-            <Card.Text>
+            <Card.Text className="mx-3">
               <span>
                 <strong>Status: </strong>
                 {table.status}
               </span>
             </Card.Text>
-            <Button
-              className="text-end"
-              variant="primary"
-              as={NavLink}
-              to={"/table/" + table.id}
-            >
-              Show more
-            </Button>
+            <div className="w-100 text-end allign-items-center">
+              <Button variant="primary" as={NavLink} to={"/table/" + table.id}>
+                Show more
+              </Button>
+            </div>
           </Card.Body>
         </Card>
       ))}
-    </Row>
+    </div>
   );
 };
 
