@@ -2,10 +2,12 @@ import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
 
 const TableForm = ({ action, tableId, ...props }) => {
-  const [status, setStatus] = useState(props.status);
-  const [peopleAmount, setPeopleAmount] = useState(props.peopleAmount);
-  const [maxPeopleAmount, setMaxPeopleAmount] = useState(props.maxPeopleAmount);
-  const [bill, setBill] = useState(props.bill);
+  const [status, setStatus] = useState(props.status || "");
+  const [peopleAmount, setPeopleAmount] = useState(props.peopleAmount || "");
+  const [maxPeopleAmount, setMaxPeopleAmount] = useState(
+    props.maxPeopleAmount || ""
+  );
+  const [bill, setBill] = useState(props.bill || "");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +37,7 @@ const TableForm = ({ action, tableId, ...props }) => {
           value={peopleAmount}
           onChange={(e) => setPeopleAmount(e.target.value)}
           type="text"
-          placeholder="0"
+          placeholder=""
         />
         <span>/</span>
         <Form.Control
@@ -44,7 +46,7 @@ const TableForm = ({ action, tableId, ...props }) => {
           value={maxPeopleAmount}
           onChange={(e) => setMaxPeopleAmount(e.target.value)}
           type="text"
-          placeholder="0"
+          placeholder=""
         />
       </div>
       {status === "Busy" ? (
@@ -57,7 +59,7 @@ const TableForm = ({ action, tableId, ...props }) => {
             value={bill}
             onChange={(e) => setBill(e.target.value)}
             type="text"
-            placeholder="0"
+            placeholder=""
           />
         </div>
       ) : (
