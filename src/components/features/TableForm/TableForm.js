@@ -47,18 +47,22 @@ const TableForm = ({ action, tableId, ...props }) => {
           placeholder="0"
         />
       </div>
-      <div className="d-flex align-items-center my-2">
-        <strong>Bill:</strong>
-        <span className="mx-2">$</span>
-        <Form.Control
-          className="d-flex align-items-center"
-          style={{ width: "50px", marginLeft: "15px" }}
-          value={bill}
-          onChange={(e) => setBill(e.target.value)}
-          type="text"
-          placeholder="0"
-        />
-      </div>
+      {status === "Busy" ? (
+        <div className="d-flex align-items-center my-2">
+          <strong>Bill:</strong>
+          <span className="mx-2">$</span>
+          <Form.Control
+            className="d-flex align-items-center"
+            style={{ width: "50px", marginLeft: "15px" }}
+            value={bill}
+            onChange={(e) => setBill(e.target.value)}
+            type="text"
+            placeholder="0"
+          />
+        </div>
+      ) : (
+        ""
+      )}
       <Button variant="primary" type="submit">
         Update
       </Button>
