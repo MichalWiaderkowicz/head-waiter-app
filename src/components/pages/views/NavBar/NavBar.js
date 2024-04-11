@@ -12,7 +12,7 @@ export const NavBar = () => {
       className="mt-4 mb-4 rounded"
     >
       <Container>
-        <Navbar.Brand href="/">head-waiter.app</Navbar.Brand>
+        <Navbar.Brand href="#home">head-waiter.app</Navbar.Brand>
         <Nav className="justify-content-end">
           <Nav.Link
             as={NavLink}
